@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\CS356\\StudyPlanner\\StudyPlanner\\StudyPlanner.Android\\StudyPlanner.Android.csproj": {}
+    "D:\\ClassSchedMgmt\\StudyPlanner\\StudyPlanner.Android\\StudyPlanner.Android.csproj": {}
   },
   "projects": {
-    "D:\\CS356\\StudyPlanner\\StudyPlanner\\StudyPlanner.Android\\StudyPlanner.Android.csproj": {
+    "D:\\ClassSchedMgmt\\StudyPlanner\\StudyPlanner.Android\\StudyPlanner.Android.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\CS356\\StudyPlanner\\StudyPlanner\\StudyPlanner.Android\\StudyPlanner.Android.csproj",
+        "projectUniqueName": "D:\\ClassSchedMgmt\\StudyPlanner\\StudyPlanner.Android\\StudyPlanner.Android.csproj",
         "projectName": "StudyPlanner.Android",
-        "projectPath": "D:\\CS356\\StudyPlanner\\StudyPlanner\\StudyPlanner.Android\\StudyPlanner.Android.csproj",
+        "projectPath": "D:\\ClassSchedMgmt\\StudyPlanner\\StudyPlanner.Android\\StudyPlanner.Android.csproj",
         "packagesPath": "C:\\Users\\BoatHome\\.nuget\\packages\\",
-        "outputPath": "D:\\CS356\\StudyPlanner\\StudyPlanner\\StudyPlanner.Android\\obj\\",
+        "outputPath": "D:\\ClassSchedMgmt\\StudyPlanner\\StudyPlanner.Android\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "configFilePaths": [
@@ -28,8 +28,8 @@
         "frameworks": {
           "monoandroid11.0": {
             "projectReferences": {
-              "D:\\CS356\\StudyPlanner\\StudyPlanner\\StudyPlanner\\StudyPlanner.csproj": {
-                "projectPath": "D:\\CS356\\StudyPlanner\\StudyPlanner\\StudyPlanner\\StudyPlanner.csproj"
+              "D:\\ClassSchedMgmt\\StudyPlanner\\StudyPlanner\\StudyPlanner.csproj": {
+                "projectPath": "D:\\ClassSchedMgmt\\StudyPlanner\\StudyPlanner\\StudyPlanner.csproj"
               }
             }
           }
@@ -54,14 +54,14 @@
         }
       }
     },
-    "D:\\CS356\\StudyPlanner\\StudyPlanner\\StudyPlanner\\StudyPlanner.csproj": {
+    "D:\\ClassSchedMgmt\\StudyPlanner\\StudyPlanner\\StudyPlanner.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\CS356\\StudyPlanner\\StudyPlanner\\StudyPlanner\\StudyPlanner.csproj",
+        "projectUniqueName": "D:\\ClassSchedMgmt\\StudyPlanner\\StudyPlanner\\StudyPlanner.csproj",
         "projectName": "StudyPlanner",
-        "projectPath": "D:\\CS356\\StudyPlanner\\StudyPlanner\\StudyPlanner\\StudyPlanner.csproj",
+        "projectPath": "D:\\ClassSchedMgmt\\StudyPlanner\\StudyPlanner\\StudyPlanner.csproj",
         "packagesPath": "C:\\Users\\BoatHome\\.nuget\\packages\\",
-        "outputPath": "D:\\CS356\\StudyPlanner\\StudyPlanner\\StudyPlanner\\obj\\",
+        "outputPath": "D:\\ClassSchedMgmt\\StudyPlanner\\StudyPlanner\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\BoatHome\\AppData\\Roaming\\NuGet\\NuGet.Config",

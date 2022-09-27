@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "S3+sRcjUuz2vyJcFweFJCCN2hwndocD3U6Bx1YWnb7QM9MgIlVeQRr4u0FX1ET7QJG8FEdXyqIONjMWEi3o50w==",
+  "dgSpecHash": "rXM2QbzWD+Fb+RIHcKDAG5Q3o0BcXA+sD0KnI5k08Ug43qIn5du8ZNsUslKwVD1zJaEWwOTlEef0zVdHjuXA0Q==",
   "success": true,
-  "projectFilePath": "D:\\CS356\\StudyPlanner\\StudyPlanner\\StudyPlanner\\StudyPlanner.csproj",
+  "projectFilePath": "D:\\ClassSchedMgmt\\StudyPlanner\\StudyPlanner\\StudyPlanner.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\BoatHome\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\BoatHome\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",

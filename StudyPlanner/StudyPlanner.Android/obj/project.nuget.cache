@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kXoKEeyuXMWskBQCvP5JaFyrfkaPduaByBQE770/aRcL0cWUVo6HeYGzyStYeRp4D1m01kVh5Em1ajsS1bc9kA==",
+  "dgSpecHash": "7LGYb86UQr+W82r1EEohzArlbmP8o/2mGNTMariJ0WPK7WMI7uinFxbgpZD9luk/3XV+YQRLvLl+aRRGNnetoA==",
   "success": true,
-  "projectFilePath": "D:\\CS356\\StudyPlanner\\StudyPlanner\\StudyPlanner.Android\\StudyPlanner.Android.csproj",
+  "projectFilePath": "D:\\ClassSchedMgmt\\StudyPlanner\\StudyPlanner.Android\\StudyPlanner.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\BoatHome\\.nuget\\packages\\sqlite-net-pcl\\1.8.116\\sqlite-net-pcl.1.8.116.nupkg.sha512",
     "C:\\Users\\BoatHome\\.nuget\\packages\\sqlitepclraw.bundle_green\\2.0.4\\sqlitepclraw.bundle_green.2.0.4.nupkg.sha512",

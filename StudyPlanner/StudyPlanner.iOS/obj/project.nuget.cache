@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "h5Jx/wx7OFKbMi9m2grcHKwQm2YaTVwojSr2xfmVkW+q9ahFehX+hTMxHg1dF3HCV4u66ARUQDO9q359zGfKcA==",
+  "dgSpecHash": "PW0f5nlZipw7/xIXxfrWtQ6uLdofkTCB+QnUOKIKMuiUKRW2/BGsjhtkksI86LzS2YejT/WRNYYyKzFYGjaxaQ==",
   "success": true,
-  "projectFilePath": "D:\\CS356\\StudyPlanner\\StudyPlanner\\StudyPlanner.iOS\\StudyPlanner.iOS.csproj",
+  "projectFilePath": "D:\\ClassSchedMgmt\\StudyPlanner\\StudyPlanner.iOS\\StudyPlanner.iOS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\BoatHome\\.nuget\\packages\\sqlite-net-pcl\\1.8.116\\sqlite-net-pcl.1.8.116.nupkg.sha512",
     "C:\\Users\\BoatHome\\.nuget\\packages\\sqlitepclraw.bundle_green\\2.0.4\\sqlitepclraw.bundle_green.2.0.4.nupkg.sha512",

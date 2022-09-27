@@ -1448,11 +1448,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\CS356\\StudyPlanner\\StudyPlanner\\StudyPlanner.iOS\\StudyPlanner.iOS.csproj",
+      "projectUniqueName": "D:\\ClassSchedMgmt\\StudyPlanner\\StudyPlanner.iOS\\StudyPlanner.iOS.csproj",
       "projectName": "StudyPlanner.iOS",
-      "projectPath": "D:\\CS356\\StudyPlanner\\StudyPlanner\\StudyPlanner.iOS\\StudyPlanner.iOS.csproj",
+      "projectPath": "D:\\ClassSchedMgmt\\StudyPlanner\\StudyPlanner.iOS\\StudyPlanner.iOS.csproj",
       "packagesPath": "C:\\Users\\BoatHome\\.nuget\\packages\\",
-      "outputPath": "D:\\CS356\\StudyPlanner\\StudyPlanner\\StudyPlanner.iOS\\obj\\",
+      "outputPath": "D:\\ClassSchedMgmt\\StudyPlanner\\StudyPlanner.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
@@ -1469,8 +1469,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "D:\\CS356\\StudyPlanner\\StudyPlanner\\StudyPlanner\\StudyPlanner.csproj": {
-              "projectPath": "D:\\CS356\\StudyPlanner\\StudyPlanner\\StudyPlanner\\StudyPlanner.csproj"
+            "D:\\ClassSchedMgmt\\StudyPlanner\\StudyPlanner\\StudyPlanner.csproj": {
+              "projectPath": "D:\\ClassSchedMgmt\\StudyPlanner\\StudyPlanner\\StudyPlanner.csproj"
             }
           }
         }
