@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StudyPlanner.Controls.CardTodo"
+             xmlns:SP="clr-namespace:StudyPlanner.Controls"
+             x:Name="cardTodo">
+
+
+    <Frame Style="{DynamicResource CardStyle}" Padding="0">
+        <SwipeView BackgroundColor="{DynamicResource BackgroundCardColor}">
+            <SwipeView.LeftItems>
+                <SwipeItems>
+                    <SwipeItem BackgroundColor="Red" Invoked="OnDeleteClicked">
+                        <SwipeItem.IconImageSource>
+                            <FontImageSource FontFamily="Icons" Glyph="delete" />
+                        </SwipeItem.IconImageSource>
+                    </SwipeItem>
+                </SwipeItems>
+            </SwipeView.LeftItems>
+            <SwipeView.RightItems>
+                <SwipeItems>
+                    <SwipeItem BackgroundColor="Red" Invoked="OnDeleteClicked">
+                        <SwipeItem.IconImageSource>
+                            <FontImageSource FontFamily="Icons" Glyph="delete"/>
+                        </SwipeItem.IconImageSource>
+                    </SwipeItem>
+                </SwipeItems>
+            </SwipeView.RightItems>
+            <Frame HasShadow="False" Padding="8" Margin="0">
+                <Grid ColumnDefinitions="auto, *, auto">
+                    <SP:ToggleButton Grid.Column="0" Color="{StaticResource PrimaryColor}" IsToggled="{Binding Task.IsComplete, Source={Reference cardTodo}}" NormalIcon="check_box_outline_blank" ToggledIcon="check_box" ToggledChanged="OnCompleteToggledChanged" />
+                    <Editor Grid.Column="1" AutoSize="TextChanges" Text="{Binding Task.Task, Source={Reference cardTodo}}" TextColor="{DynamicResource DescriptionColor}" FontSize="16" Placeholder="{Binding Placeholder, Source={Reference cardTodo}}" PlaceholderColor="{DynamicResource PlaceholderColor}" IsSpellCheckEnabled="False" Focused="OnFocused" TextChanged="OnTextChanged" Completed="OnCompleted" />
+                    <SP:ToggleButton Grid.Column="2" Color="{StaticResource ImportantColor}" IsToggled="{Binding Task.IsImportant, Source={Reference cardTodo}}" NormalIcon="star_outline" ToggledIcon="star" ToggledChanged="OnImportantToggledChanged" />
+                </Grid>
+            </Frame>
+        </SwipeView>
+    </Frame>
+
+</ContentView>

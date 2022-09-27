@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StudyPlanner.Controls.Header"
+             x:Name="header">
+
+    <StackLayout>
+        <StackLayout.GestureRecognizers>
+            <TapGestureRecognizer Tapped="OnAddClicked" />
+        </StackLayout.GestureRecognizers>
+        <StackLayout Orientation="Horizontal" Spacing="{DynamicResource TextSpacing}">
+            <Label Text="{Binding Text, Source={Reference header}}" Style="{DynamicResource Header}" HorizontalOptions="FillAndExpand" />
+            <ImageButton BackgroundColor="Transparent" IsVisible="{Binding EnableClicked, Source={Reference header}}" Clicked="OnAddClicked">
+                <ImageButton.Source>
+                    <FontImageSource FontFamily="Icons" Glyph="add" Size="32" Color="{DynamicResource TitleColor}"/>
+                </ImageButton.Source>
+            </ImageButton>
+        </StackLayout>
+        <StackLayout HeightRequest="1" MinimumHeightRequest="1" BackgroundColor="{DynamicResource LineColor}" Margin="16" />
+    </StackLayout>
+
+</ContentView>

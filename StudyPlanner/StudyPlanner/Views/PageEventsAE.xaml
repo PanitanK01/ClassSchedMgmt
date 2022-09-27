@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:SP="clr-namespace:StudyPlanner.Controls"
+             x:Class="StudyPlanner.Views.PageEventsAE"
+             Title="{Binding Title}"
+             Style="{DynamicResource PageAE}">
+
+    <ScrollView Padding="{DynamicResource PagePadding}">
+        <StackLayout Spacing="{DynamicResource StackSpacing}">
+
+            <SP:Input Type="Entry" Header="Title" Text="{Binding Event.Name}" Placeholder="Title name" />
+            <SP:Input Type="Editor" Header="Description" Text="{Binding Event.Description}" Placeholder="Description" />
+            <SP:Input Type="DatePicker" Header="Start Date" Date="{Binding Event.StartDate}" DateSelected="OnStartDateSelected" />
+            <SP:Input Type="TimePicker" Header="Start Time" Time="{Binding Event.StartTime}" />
+            <SP:Input Type="DatePicker" Header="End Date" Date="{Binding Event.EndDate}" MinimumDate="{Binding Event.StartDate}" />
+            <SP:Input Type="TimePicker" Header="End Time" Time="{Binding Event.EndTime}" />
+            <SP:Input Type="Entry" Header="Location" Text="{Binding Event.Location}" Placeholder="Event location" />
+            <SP:Input Type="Editor" Header="Organizer / Host" Text="{Binding Event.OrganizerHost}" Placeholder="Organizer / Host" />
+
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

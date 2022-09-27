@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:SP="clr-namespace:StudyPlanner.Controls"
+             x:Class="StudyPlanner.Views.PageAssignmentsAE"
+             Title="{Binding Title}"
+             Style="{DynamicResource PageAE}">
+
+
+    <ScrollView Padding="{DynamicResource PagePadding}">
+        <StackLayout Spacing="{DynamicResource StackSpacing}">
+
+            <SP:Input x:Name="ip_codesecPicker" Type="Picker" Header="Course Code / Section Number" SelectedItem="{Binding Assignments.CodeNumber}"/>
+            <SP:Input Type="Editor" Header="Description" Text="{Binding Assignments.Description}" Placeholder="Description" />
+            <SP:Input Type="DatePicker" Header="Start Date" Date="{Binding Assignments.StartDate}" DateSelected="OnStartDateSelected" />
+            <SP:Input Type="TimePicker" Header="Start Time" Time="{Binding Assignments.StartTime}" />
+            <SP:Input Type="DatePicker" Header="End Date" Date="{Binding Assignments.EndDate}" MinimumDate="{Binding Event.StartDate}" />
+            <SP:Input Type="TimePicker" Header="End Time" Time="{Binding Assignments.EndTime}" />
+            
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

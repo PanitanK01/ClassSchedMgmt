@@ -1,0 +1,98 @@
+D:\Xamarin\StudyPlanner\StudyPlanner\StudyPlanner\bin\Debug\netstandard2.0\StudyPlanner.deps.json
+D:\Xamarin\StudyPlanner\StudyPlanner\StudyPlanner\bin\Debug\netstandard2.0\StudyPlanner.dll
+D:\Xamarin\StudyPlanner\StudyPlanner\StudyPlanner\bin\Debug\netstandard2.0\ref\StudyPlanner.dll
+D:\Xamarin\StudyPlanner\StudyPlanner\StudyPlanner\bin\Debug\netstandard2.0\StudyPlanner.pdb
+D:\Xamarin\StudyPlanner\StudyPlanner\StudyPlanner\obj\Debug\netstandard2.0\StudyPlanner.GeneratedMSBuildEditorConfig.editorconfig
+D:\Xamarin\StudyPlanner\StudyPlanner\StudyPlanner\obj\Debug\netstandard2.0\App.xaml.g.cs
+D:\Xamarin\StudyPlanner\StudyPlanner\StudyPlanner\obj\Debug\netstandard2.0\Controls\CardEvent.xaml.g.cs
+D:\Xamarin\StudyPlanner\StudyPlanner\StudyPlanner\obj\Debug\netstandard2.0\Controls\CardNote.xaml.g.cs
+D:\Xamarin\StudyPlanner\StudyPlanner\StudyPlanner\obj\Debug\netstandard2.0\Controls\CardTimeActive.xaml.g.cs
+D:\Xamarin\StudyPlanner\StudyPlanner\StudyPlanner\obj\Debug\netstandard2.0\Controls\CardTodo.xaml.g.cs
+D:\Xamarin\StudyPlanner\StudyPlanner\StudyPlanner\obj\Debug\netstandard2.0\Controls\Header.xaml.g.cs
+D:\Xamarin\StudyPlanner\StudyPlanner\StudyPlanner\obj\Debug\netstandard2.0\Controls\Input.xaml.g.cs
+D:\Xamarin\StudyPlanner\StudyPlanner\StudyPlanner\obj\Debug\netstandard2.0\Controls\NoData.xaml.g.cs
+D:\Xamarin\StudyPlanner\StudyPlanner\StudyPlanner\obj\Debug\netstandard2.0\Controls\ToggleButton.xaml.g.cs
+D:\Xamarin\StudyPlanner\StudyPlanner\StudyPlanner\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+D:\Xamarin\StudyPlanner\StudyPlanner\StudyPlanner\obj\Debug\netstandard2.0\Views\PageClassroom.xaml.g.cs
+D:\Xamarin\StudyPlanner\StudyPlanner\StudyPlanner\obj\Debug\netstandard2.0\Views\PageClassroomAE.xaml.g.cs
+D:\Xamarin\StudyPlanner\StudyPlanner\StudyPlanner\obj\Debug\netstandard2.0\Views\PageEvents.xaml.g.cs
+D:\Xamarin\StudyPlanner\StudyPlanner\StudyPlanner\obj\Debug\netstandard2.0\Views\PageEventsAE.xaml.g.cs
+D:\Xamarin\StudyPlanner\StudyPlanner\StudyPlanner\obj\Debug\netstandard2.0\Views\PageHome.xaml.g.cs
+D:\Xamarin\StudyPlanner\StudyPlanner\StudyPlanner\obj\Debug\netstandard2.0\Views\PageNotes.xaml.g.cs
+D:\Xamarin\StudyPlanner\StudyPlanner\StudyPlanner\obj\Debug\netstandard2.0\Views\PageNotesAE.xaml.g.cs
+D:\Xamarin\StudyPlanner\StudyPlanner\StudyPlanner\obj\Debug\netstandard2.0\Views\PagePreviewImage.xaml.g.cs
+D:\Xamarin\StudyPlanner\StudyPlanner\StudyPlanner\obj\Debug\netstandard2.0\Views\PageTodo.xaml.g.cs
+D:\Xamarin\StudyPlanner\StudyPlanner\StudyPlanner\obj\Debug\netstandard2.0\StudyPlanner.AssemblyInfoInputs.cache
+D:\Xamarin\StudyPlanner\StudyPlanner\StudyPlanner\obj\Debug\netstandard2.0\StudyPlanner.AssemblyInfo.cs
+D:\Xamarin\StudyPlanner\StudyPlanner\StudyPlanner\obj\Debug\netstandard2.0\StudyPlanner.csproj.CoreCompileInputs.cache
+D:\Xamarin\StudyPlanner\StudyPlanner\StudyPlanner\obj\Debug\netstandard2.0\XamlC.stamp
+D:\Xamarin\StudyPlanner\StudyPlanner\StudyPlanner\obj\Debug\netstandard2.0\StudyPlanner.dll
+D:\Xamarin\StudyPlanner\StudyPlanner\StudyPlanner\obj\Debug\netstandard2.0\ref\StudyPlanner.dll
+D:\Xamarin\StudyPlanner\StudyPlanner\StudyPlanner\obj\Debug\netstandard2.0\StudyPlanner.pdb
+D:\Xamarin\StudyPlanner\StudyPlanner\StudyPlanner\obj\Debug\netstandard2.0\StudyPlanner.csproj.AssemblyReference.cache
+D:\BU ปี3\โครงงาน1\StudyPlanner\StudyPlanner\StudyPlanner\bin\Debug\netstandard2.0\StudyPlanner.deps.json
+D:\BU ปี3\โครงงาน1\StudyPlanner\StudyPlanner\StudyPlanner\bin\Debug\netstandard2.0\StudyPlanner.dll
+D:\BU ปี3\โครงงาน1\StudyPlanner\StudyPlanner\StudyPlanner\bin\Debug\netstandard2.0\ref\StudyPlanner.dll
+D:\BU ปี3\โครงงาน1\StudyPlanner\StudyPlanner\StudyPlanner\bin\Debug\netstandard2.0\StudyPlanner.pdb
+D:\BU ปี3\โครงงาน1\StudyPlanner\StudyPlanner\StudyPlanner\obj\Debug\netstandard2.0\StudyPlanner.csproj.AssemblyReference.cache
+D:\BU ปี3\โครงงาน1\StudyPlanner\StudyPlanner\StudyPlanner\obj\Debug\netstandard2.0\StudyPlanner.GeneratedMSBuildEditorConfig.editorconfig
+D:\BU ปี3\โครงงาน1\StudyPlanner\StudyPlanner\StudyPlanner\obj\Debug\netstandard2.0\App.xaml.g.cs
+D:\BU ปี3\โครงงาน1\StudyPlanner\StudyPlanner\StudyPlanner\obj\Debug\netstandard2.0\Controls\CardEvent.xaml.g.cs
+D:\BU ปี3\โครงงาน1\StudyPlanner\StudyPlanner\StudyPlanner\obj\Debug\netstandard2.0\Controls\CardNote.xaml.g.cs
+D:\BU ปี3\โครงงาน1\StudyPlanner\StudyPlanner\StudyPlanner\obj\Debug\netstandard2.0\Controls\CardTimeActive.xaml.g.cs
+D:\BU ปี3\โครงงาน1\StudyPlanner\StudyPlanner\StudyPlanner\obj\Debug\netstandard2.0\Controls\CardTodo.xaml.g.cs
+D:\BU ปี3\โครงงาน1\StudyPlanner\StudyPlanner\StudyPlanner\obj\Debug\netstandard2.0\Controls\Header.xaml.g.cs
+D:\BU ปี3\โครงงาน1\StudyPlanner\StudyPlanner\StudyPlanner\obj\Debug\netstandard2.0\Controls\Input.xaml.g.cs
+D:\BU ปี3\โครงงาน1\StudyPlanner\StudyPlanner\StudyPlanner\obj\Debug\netstandard2.0\Controls\NoData.xaml.g.cs
+D:\BU ปี3\โครงงาน1\StudyPlanner\StudyPlanner\StudyPlanner\obj\Debug\netstandard2.0\Controls\ToggleButton.xaml.g.cs
+D:\BU ปี3\โครงงาน1\StudyPlanner\StudyPlanner\StudyPlanner\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+D:\BU ปี3\โครงงาน1\StudyPlanner\StudyPlanner\StudyPlanner\obj\Debug\netstandard2.0\Views\PageClassroom.xaml.g.cs
+D:\BU ปี3\โครงงาน1\StudyPlanner\StudyPlanner\StudyPlanner\obj\Debug\netstandard2.0\Views\PageClassroomAE.xaml.g.cs
+D:\BU ปี3\โครงงาน1\StudyPlanner\StudyPlanner\StudyPlanner\obj\Debug\netstandard2.0\Views\PageEvents.xaml.g.cs
+D:\BU ปี3\โครงงาน1\StudyPlanner\StudyPlanner\StudyPlanner\obj\Debug\netstandard2.0\Views\PageEventsAE.xaml.g.cs
+D:\BU ปี3\โครงงาน1\StudyPlanner\StudyPlanner\StudyPlanner\obj\Debug\netstandard2.0\Views\PageHome.xaml.g.cs
+D:\BU ปี3\โครงงาน1\StudyPlanner\StudyPlanner\StudyPlanner\obj\Debug\netstandard2.0\Views\PageNotes.xaml.g.cs
+D:\BU ปี3\โครงงาน1\StudyPlanner\StudyPlanner\StudyPlanner\obj\Debug\netstandard2.0\Views\PageNotesAE.xaml.g.cs
+D:\BU ปี3\โครงงาน1\StudyPlanner\StudyPlanner\StudyPlanner\obj\Debug\netstandard2.0\Views\PagePreviewImage.xaml.g.cs
+D:\BU ปี3\โครงงาน1\StudyPlanner\StudyPlanner\StudyPlanner\obj\Debug\netstandard2.0\Views\PageTodo.xaml.g.cs
+D:\BU ปี3\โครงงาน1\StudyPlanner\StudyPlanner\StudyPlanner\obj\Debug\netstandard2.0\StudyPlanner.AssemblyInfoInputs.cache
+D:\BU ปี3\โครงงาน1\StudyPlanner\StudyPlanner\StudyPlanner\obj\Debug\netstandard2.0\StudyPlanner.AssemblyInfo.cs
+D:\BU ปี3\โครงงาน1\StudyPlanner\StudyPlanner\StudyPlanner\obj\Debug\netstandard2.0\StudyPlanner.csproj.CoreCompileInputs.cache
+D:\BU ปี3\โครงงาน1\StudyPlanner\StudyPlanner\StudyPlanner\obj\Debug\netstandard2.0\XamlC.stamp
+D:\BU ปี3\โครงงาน1\StudyPlanner\StudyPlanner\StudyPlanner\obj\Debug\netstandard2.0\StudyPlanner.dll
+D:\BU ปี3\โครงงาน1\StudyPlanner\StudyPlanner\StudyPlanner\obj\Debug\netstandard2.0\ref\StudyPlanner.dll
+D:\BU ปี3\โครงงาน1\StudyPlanner\StudyPlanner\StudyPlanner\obj\Debug\netstandard2.0\StudyPlanner.pdb
+D:\CS356\StudyPlanner\StudyPlanner\StudyPlanner\bin\Debug\netstandard2.0\StudyPlanner.deps.json
+D:\CS356\StudyPlanner\StudyPlanner\StudyPlanner\bin\Debug\netstandard2.0\StudyPlanner.dll
+D:\CS356\StudyPlanner\StudyPlanner\StudyPlanner\bin\Debug\netstandard2.0\StudyPlanner.pdb
+D:\CS356\StudyPlanner\StudyPlanner\StudyPlanner\obj\Debug\netstandard2.0\StudyPlanner.csproj.AssemblyReference.cache
+D:\CS356\StudyPlanner\StudyPlanner\StudyPlanner\obj\Debug\netstandard2.0\StudyPlanner.GeneratedMSBuildEditorConfig.editorconfig
+D:\CS356\StudyPlanner\StudyPlanner\StudyPlanner\obj\Debug\netstandard2.0\App.xaml.g.cs
+D:\CS356\StudyPlanner\StudyPlanner\StudyPlanner\obj\Debug\netstandard2.0\Controls\CardEvent.xaml.g.cs
+D:\CS356\StudyPlanner\StudyPlanner\StudyPlanner\obj\Debug\netstandard2.0\Controls\CardNote.xaml.g.cs
+D:\CS356\StudyPlanner\StudyPlanner\StudyPlanner\obj\Debug\netstandard2.0\Controls\CardTimeActive.xaml.g.cs
+D:\CS356\StudyPlanner\StudyPlanner\StudyPlanner\obj\Debug\netstandard2.0\Controls\CardTodo.xaml.g.cs
+D:\CS356\StudyPlanner\StudyPlanner\StudyPlanner\obj\Debug\netstandard2.0\Controls\Header.xaml.g.cs
+D:\CS356\StudyPlanner\StudyPlanner\StudyPlanner\obj\Debug\netstandard2.0\Controls\Input.xaml.g.cs
+D:\CS356\StudyPlanner\StudyPlanner\StudyPlanner\obj\Debug\netstandard2.0\Controls\NoData.xaml.g.cs
+D:\CS356\StudyPlanner\StudyPlanner\StudyPlanner\obj\Debug\netstandard2.0\Controls\ToggleButton.xaml.g.cs
+D:\CS356\StudyPlanner\StudyPlanner\StudyPlanner\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+D:\CS356\StudyPlanner\StudyPlanner\StudyPlanner\obj\Debug\netstandard2.0\Views\PageClassroom.xaml.g.cs
+D:\CS356\StudyPlanner\StudyPlanner\StudyPlanner\obj\Debug\netstandard2.0\Views\PageClassroomAE.xaml.g.cs
+D:\CS356\StudyPlanner\StudyPlanner\StudyPlanner\obj\Debug\netstandard2.0\Views\PageEvents.xaml.g.cs
+D:\CS356\StudyPlanner\StudyPlanner\StudyPlanner\obj\Debug\netstandard2.0\Views\PageEventsAE.xaml.g.cs
+D:\CS356\StudyPlanner\StudyPlanner\StudyPlanner\obj\Debug\netstandard2.0\Views\PageHome.xaml.g.cs
+D:\CS356\StudyPlanner\StudyPlanner\StudyPlanner\obj\Debug\netstandard2.0\Views\PageNotes.xaml.g.cs
+D:\CS356\StudyPlanner\StudyPlanner\StudyPlanner\obj\Debug\netstandard2.0\Views\PageNotesAE.xaml.g.cs
+D:\CS356\StudyPlanner\StudyPlanner\StudyPlanner\obj\Debug\netstandard2.0\Views\PagePreviewImage.xaml.g.cs
+D:\CS356\StudyPlanner\StudyPlanner\StudyPlanner\obj\Debug\netstandard2.0\Views\PageTodo.xaml.g.cs
+D:\CS356\StudyPlanner\StudyPlanner\StudyPlanner\obj\Debug\netstandard2.0\StudyPlanner.AssemblyInfoInputs.cache
+D:\CS356\StudyPlanner\StudyPlanner\StudyPlanner\obj\Debug\netstandard2.0\StudyPlanner.AssemblyInfo.cs
+D:\CS356\StudyPlanner\StudyPlanner\StudyPlanner\obj\Debug\netstandard2.0\StudyPlanner.csproj.CoreCompileInputs.cache
+D:\CS356\StudyPlanner\StudyPlanner\StudyPlanner\obj\Debug\netstandard2.0\XamlC.stamp
+D:\CS356\StudyPlanner\StudyPlanner\StudyPlanner\obj\Debug\netstandard2.0\StudyPlanner.dll
+D:\CS356\StudyPlanner\StudyPlanner\StudyPlanner\obj\Debug\netstandard2.0\refint\StudyPlanner.dll
+D:\CS356\StudyPlanner\StudyPlanner\StudyPlanner\obj\Debug\netstandard2.0\StudyPlanner.pdb
+D:\CS356\StudyPlanner\StudyPlanner\StudyPlanner\obj\Debug\netstandard2.0\ref\StudyPlanner.dll
+D:\CS356\StudyPlanner\StudyPlanner\StudyPlanner\obj\Debug\netstandard2.0\Views\PageGrade.xaml.g.cs
+D:\CS356\StudyPlanner\StudyPlanner\StudyPlanner\obj\Debug\netstandard2.0\Views\PageAssignmentsAE.xaml.g.cs

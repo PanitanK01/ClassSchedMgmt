@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:SP="clr-namespace:StudyPlanner.Controls"
+             x:Class="StudyPlanner.Views.PageClassroomAE"
+             Title="{Binding Title}"
+             Style="{DynamicResource PageAE}">
+    
+    <ScrollView Padding="{DynamicResource PagePadding}">
+        <StackLayout Spacing="{DynamicResource StackSpacing}">
+
+            <SP:Input x:Name="ip_semesterPicker" Type="Picker" Header="Semester" SelectedItem="{Binding Class.Semester}"/>
+            <SP:Input x:Name="ip_yearPicker" Type="Picker" Header="Academic Year" SelectedItem="{Binding Class.Year}"/>
+            <SP:Input x:Name="ip_dayPicker" Type="Picker" Header="Day" SelectedItem="{Binding Class.Day}" Placeholder="Class day" />
+            <SP:Input x:Name="ip_codePicker" Type="Picker" Header="Course Code" SelectedItem="{Binding Class.Code}"/>
+            <SP:Input Type="Entry" Header="Course Name" Text="{Binding Class.Name}" Placeholder="Class name" />
+            <SP:Input Type="TimePicker" Header="Start Time" Time="{Binding Class.StartTime}" />
+            <SP:Input Type="TimePicker" Header="End Time" Time="{Binding Class.EndTime}" />
+            <SP:Input Type="Entry" Header="Room" Text="{Binding Class.Room}" Placeholder="Room number" />
+            <SP:Input Type="Entry" Header="Section" Text="{Binding Class.Section}" Placeholder="Section number" />
+            <SP:Input Type="Entry" KeyboardType="Numeric" Header="Seat Number" Text="{Binding Class.Number}" Placeholder="Student number" />
+            <SP:Input Type="Editor" Header="Grade" Text="{Binding Class.Grade}" Placeholder="Grade" />
+
+        </StackLayout>
+    </ScrollView>
+    
+</ContentPage>

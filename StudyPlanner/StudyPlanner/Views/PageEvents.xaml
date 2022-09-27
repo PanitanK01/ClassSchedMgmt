@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:SP="clr-namespace:StudyPlanner.Controls"
+             x:Class="StudyPlanner.Views.PageEvents"
+             BackgroundColor="{DynamicResource BackgroundColor}">
+    
+    <RefreshView x:Name="refresh" Refreshing="OnRefreshing" RefreshColor="{DynamicResource PrimaryColor}">
+        <StackLayout>
+            <ScrollView Padding="{DynamicResource PagePadding}" >
+                <StackLayout Spacing="{DynamicResource StackSpacing}">
+
+                    <SP:Header Text="Activity" EnableClicked="True" Clicked="OnAddClicked" />
+
+                    <StackLayout x:Name="dataView">
+                        <BindableLayout.EmptyViewTemplate>
+                            <DataTemplate>
+                                <SP:NoData Icon="calendar_today" Description="You don't have any event" />
+                            </DataTemplate>
+                        </BindableLayout.EmptyViewTemplate>
+                        <BindableLayout.ItemTemplate>
+                            <DataTemplate>
+                                <SP:CardEvent ID="{Binding ID}" Title="{Binding Name}" StartDate="{Binding StartDate}" Description="{Binding LongSummary}" Clicked="OnCardClicked" />
+                            </DataTemplate>
+                        </BindableLayout.ItemTemplate>
+                    </StackLayout>
+
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </RefreshView>
+
+</ContentPage>

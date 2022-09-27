@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:SP="clr-namespace:StudyPlanner.Controls"
+             x:Class="StudyPlanner.Views.PageHome"
+             BackgroundColor="{DynamicResource BackgroundColor}">
+
+    <RefreshView x:Name="refresh" Refreshing="OnRefreshing" RefreshColor="{DynamicResource PrimaryColor}">
+        <StackLayout>
+            <ScrollView Padding="{DynamicResource PagePadding}">
+                <StackLayout Spacing="{DynamicResource StackSpacing}">
+
+                    <!--SP:Header Text="Home" /-->
+                    
+                    <StackLayout Orientation="Horizontal" Spacing="{DynamicResource TextSpacing}">
+                        <Label Text="Home" Style="{DynamicResource Header}" HorizontalOptions="FillAndExpand" />
+                                 <!--Todo เปลียนรูปคน รูปภาพ -->
+                        <Label Text="NameProfile" FontSize="16" VerticalOptions="Center"/>
+                        <ImageButton Source="account.png"  />
+                    </StackLayout>
+                    
+                    <SP:Input Type="Entry" Placeholder="Search" Completed="Input_Completed" />
+                    
+                    <Label Text="Date:" Style="{DynamicResource Subheader}" HorizontalOptions="FillAndExpand" VerticalOptions="Center"/>
+
+                    
+                    <StackLayout x:Name="classView">
+                        <BindableLayout.EmptyViewTemplate>
+                            <DataTemplate>
+                                <SP:NoData Icon="celebration" Description="You don't have any class today" />
+                            </DataTemplate>
+                        </BindableLayout.EmptyViewTemplate>
+                        <BindableLayout.ItemTemplate>
+                            <DataTemplate>
+                                <SP:CardTimeActive Title="{Binding Name}" Description="{Binding LongSummary}" Day="{Binding Day}" StartTime="{Binding StartTime}" EndTime="{Binding EndTime}" />
+                            </DataTemplate>
+                        </BindableLayout.ItemTemplate>
+                    </StackLayout>
+                    
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </RefreshView>
+    
+</ContentPage>

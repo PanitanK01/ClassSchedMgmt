@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:Convert="clr-namespace:StudyPlanner.Converters"
+             x:Class="StudyPlanner.Controls.CardNote"
+             x:Name="cardNote">
+
+    <ContentView.Resources>
+        <ResourceDictionary>
+            <Convert:ByteToImageSource x:Key="ByteToImageSource" />
+        </ResourceDictionary>
+    </ContentView.Resources>
+
+    <Frame Style="{DynamicResource CardStyle}">
+        <Frame.GestureRecognizers>
+            <TapGestureRecognizer Tapped="OnCardClicked" />
+        </Frame.GestureRecognizers>
+
+        <StackLayout Spacing="0">
+            <FlexLayout BindableLayout.ItemsSource="{Binding Images, Source={Reference cardNote}}" JustifyContent="SpaceAround">
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate>
+                        <Frame Padding="0" Margin="0,0,0,8" HasShadow="False" CornerRadius="16">
+                            <Image Source="{Binding Bytes, Converter={StaticResource ByteToImageSource}}" WidthRequest="50" HeightRequest="50" Aspect="AspectFill">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding PreviewImageCommand, Source={Reference cardNote}}" CommandParameter="{Binding .}" />
+                                </Image.GestureRecognizers>
+                            </Image>
+                        </Frame>
+                    </DataTemplate>
+                </BindableLayout.ItemTemplate>
+            </FlexLayout>
+            
+            <StackLayout Spacing="{DynamicResource TextSpacing}">
+
+                <StackLayout Spacing="{DynamicResource TextSpacing}" Orientation="Horizontal">
+                    <Frame MinimumWidthRequest="16" WidthRequest="16" HeightRequest="16" Padding="0" BackgroundColor="{Binding TagColor, Source={Reference cardNote}}" VerticalOptions="Center" CornerRadius="16" HasShadow="False" />
+                    <Label Text="{Binding Title, Source={Reference cardNote}}" HorizontalOptions="FillAndExpand" Style="{DynamicResource TitleCardInactiveStyle}" />
+                </StackLayout>
+
+                <Label Text="{Binding Class, Source={Reference cardNote}, StringFormat='Classroom : {0}'}" Style="{DynamicResource DescriptionInactiveStyle}"/>
+                <Label Text="{Binding Note, Source={Reference cardNote}}" Style="{DynamicResource DescriptionInactiveStyle}"/>
+
+            </StackLayout>
+        </StackLayout>
+
+    </Frame>
+    
+</ContentView>

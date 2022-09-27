@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:SP="clr-namespace:StudyPlanner.Views"
+       x:Class="StudyPlanner.MainPage"
+       Shell.NavBarIsVisible="False"
+       Shell.NavBarHasShadow="True"
+       Shell.TitleColor="{DynamicResource PrimaryColor}"
+       Shell.UnselectedColor="{DynamicResource PlaceholderColor}"
+       Shell.BackgroundColor="{DynamicResource BackgroundCardColor}">
+
+    <TabBar>
+        <ShellContent Title="Home" ContentTemplate="{DataTemplate SP:PageHome}">
+            <ShellContent.Icon>
+                <FontImageSource FontFamily="Icons" Glyph="home" />
+            </ShellContent.Icon>
+        </ShellContent>
+        <ShellContent Title="Schedule" ContentTemplate="{DataTemplate SP:PageClassroom}">
+            <ShellContent.Icon>
+                <FontImageSource FontFamily="Icons" Glyph="class" />
+            </ShellContent.Icon>
+        </ShellContent>
+        <ShellContent Title="Activity" ContentTemplate="{DataTemplate SP:PageEvents}">
+            <ShellContent.Icon>
+                <FontImageSource FontFamily="Icons" Glyph="event" />
+            </ShellContent.Icon>
+        </ShellContent>
+        <ShellContent Title="Assignments" ContentTemplate="{DataTemplate SP:PageTodo}">
+            <ShellContent.Icon>
+                <FontImageSource FontFamily="Icons" Glyph="format_list_bulleted" />
+            </ShellContent.Icon>
+        </ShellContent>
+        <ShellContent Title="Notes" ContentTemplate="{DataTemplate SP:PageNotes}">
+            <ShellContent.Icon>
+                <FontImageSource FontFamily="Icons" Glyph="sticky_note_2" />
+            </ShellContent.Icon>
+        </ShellContent>
+        <ShellContent Title="Grade" ContentTemplate="{DataTemplate SP:PageGrade}">
+            <ShellContent.Icon>
+                <FontImageSource FontFamily="Icons" Glyph="school" />
+            </ShellContent.Icon>
+        </ShellContent>
+    </TabBar>
+    
+</Shell>

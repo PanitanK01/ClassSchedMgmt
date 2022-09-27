@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StudyPlanner.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <x:Int16 x:Key="TextSpacing">8</x:Int16>
+            <x:Int16 x:Key="StackSpacing">16</x:Int16>
+            <x:Int16 x:Key="PagePadding">32</x:Int16>
+
+            <Array x:Key="DayColor" Type="{Type Color}">
+                <Color>#E63018</Color>
+                <Color>#f2c200</Color>
+                <Color>#EC407A</Color>
+                <Color>#43A047</Color>
+                <Color>#FF6F00</Color>
+                <Color>#4DA8FC</Color>
+                <Color>#8B18E6</Color>
+            </Array>
+
+            <Color x:Key="PrimaryColor">#7AAFFF</Color>
+            <Color x:Key="BackgroundColor">#E5E5E5</Color>
+            <Color x:Key="BackgroundEntryColor">#F8F9FA</Color>
+            <Color x:Key="BackgroundCardColor">#FFFFFF</Color>
+            <Color x:Key="BackgroundCardInactiveColor">#FFFFFF</Color>
+            <Color x:Key="BackgroundCardActiveColor">#7AAFFF</Color>
+            <Color x:Key="TitleColor">#222222</Color>
+            <Color x:Key="TitleCardColor">#54595D</Color>
+            <Color x:Key="TitleCardInactiveColor">#54595D</Color>
+            <Color x:Key="TitleCardActiveColor">#FFFFFF</Color>
+            <Color x:Key="DescriptionColor">#72777D</Color>
+            <Color x:Key="DescriptionInactiveColor">#72777D</Color>
+            <Color x:Key="DescriptionActiveColor">#BFFFFFFF</Color>
+            <Color x:Key="PlaceholderColor">#BABABA</Color>
+            <Color x:Key="LineColor">#25000000</Color>
+            <Color x:Key="ImportantColor">#F9C22D</Color>
+
+            <!-- Style -->
+            
+            <Style x:Key="CardStyle" TargetType="Frame">
+                <Setter Property="CornerRadius" Value="16" />
+                <Setter Property="Padding" Value="24" />
+                <Setter Property="Margin" Value="3" />
+            </Style>
+            <Style x:Key="CardInactiveStyle" TargetType="Frame" BasedOn="{StaticResource CardStyle}">
+                <Setter Property="BackgroundColor" Value="{DynamicResource BackgroundCardInactiveColor}" />
+            </Style>
+            <Style x:Key="CardActiveStyle" TargetType="Frame" BasedOn="{StaticResource CardStyle}">
+                <Setter Property="BackgroundColor" Value="{DynamicResource BackgroundCardActiveColor}" />
+            </Style>
+            
+            <Style x:Key="TitleCardStyle" TargetType="Label">
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="FontSize" Value="Medium" />
+            </Style>
+            <Style x:Key="TitleCardInactiveStyle" TargetType="Label" BasedOn="{StaticResource TitleCardStyle}">
+                <Setter Property="TextColor" Value="{DynamicResource TitleCardInactiveColor}" />
+            </Style>
+            <Style x:Key="TitleCardActiveStyle" TargetType="Label" BasedOn="{StaticResource TitleCardStyle}">
+                <Setter Property="TextColor" Value="{DynamicResource TitleCardActiveColor}" />
+            </Style>
+
+            <Style x:Key="DescriptionStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="Small" />
+            </Style>
+            <Style x:Key="DescriptionInactiveStyle" TargetType="Label" BasedOn="{StaticResource DescriptionStyle}">
+                <Setter Property="TextColor" Value="{DynamicResource DescriptionInactiveColor}" />
+            </Style>
+            <Style x:Key="DescriptionActiveStyle" TargetType="Label" BasedOn="{StaticResource DescriptionStyle}">
+                <Setter Property="TextColor" Value="{DynamicResource DescriptionActiveColor}" />
+            </Style>
+            <Style x:Key="Header" TargetType="Label">
+                <Setter Property="TextColor" Value="{DynamicResource TitleColor}" />
+                <Setter Property="FontSize" Value="28" />
+                <Setter Property="FontAttributes" Value="Bold" />
+            </Style>
+
+            <Style x:Key="Subheader" TargetType="Label">
+                <Setter Property="TextColor" Value="{DynamicResource TitleColor}" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="FontSize" Value="20" />
+            </Style>
+
+            <Style x:Key="PageAE" TargetType="ContentPage">
+                <Setter Property="Shell.TabBarIsVisible" Value="False" />
+                <Setter Property="Shell.NavBarIsVisible" Value="True" />
+                <Setter Property="Shell.BackgroundColor" Value="{DynamicResource BackgroundCardColor}" />
+                <Setter Property="Shell.TitleColor" Value="{DynamicResource TitleColor}" />
+                <Setter Property="Shell.ForegroundColor" Value="{DynamicResource TitleColor}" />
+                <Setter Property="BackgroundColor" Value="{DynamicResource BackgroundColor}" />
+            </Style>
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

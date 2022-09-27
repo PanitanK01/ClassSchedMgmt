@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:SP="clr-namespace:StudyPlanner.Controls"
+             x:Class="StudyPlanner.Views.PageNotesAE"
+             Title="{Binding Title}"
+             Style="{DynamicResource PageAE}">
+
+    <StackLayout>
+        <ScrollView Padding="{DynamicResource PagePadding}">
+            <StackLayout Spacing="{DynamicResource StackSpacing}">
+
+                <SP:Input x:Name="tagColorPicker" Type="ColorPicker" Header="Tag Color" SelectedColor="{Binding Note.TagColor}" />
+                <SP:Input x:Name="titleEntry" Type="Entry" Header="Title" Placeholder="Note Title" Text="{Binding Note.Title}" />
+                <SP:Input x:Name="ip_tagPicker" Type="Picker" Header="Tag" SelectedItem="{Binding Class.Semester}" Placeholder="--- Select Tag ---" />
+                <SP:Input x:Name="textEntry" Type="Editor" Header="Note" Placeholder="Note" Text="{Binding Note.Text}" />
+                <SP:Input x:Name="imagePicker" Type="ImagePicker" Header="Image" ItemsSource="{Binding Images}" Images="{Binding Note.ImageList}" 
+                          ImageClicked="OnImageClicked" ImageAdded="OnImageAdded" RemovedImages="{Binding RemovedImages}" ErrorHandler="OnImagePickerErrorHandler" />
+
+            </StackLayout>
+        </ScrollView>
+    </StackLayout>
+
+
+</ContentPage>

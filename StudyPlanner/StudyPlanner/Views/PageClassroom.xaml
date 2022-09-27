@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:SP="clr-namespace:StudyPlanner.Controls"
+             x:Class="StudyPlanner.Views.PageClassroom"
+             BackgroundColor="{DynamicResource BackgroundColor}">
+
+    <RefreshView x:Name="refresh" Refreshing="OnRefreshing" RefreshColor="{DynamicResource PrimaryColor}">
+        <StackLayout> <!-- Surround with stacklayout fix screen render for no reason. WTF Xamarin!!! -->
+            <ScrollView Padding="{DynamicResource PagePadding}" >
+                <StackLayout Spacing="{DynamicResource StackSpacing}">
+
+                    <SP:Header Text="Schedule" EnableClicked="True" Clicked="OnAddClicked" />
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Button Grid.Column="1" Text="Courses" ImageSource="library_books.png"/>
+                    </Grid>
+
+                    <StackLayout x:Name="dataView">
+                        <BindableLayout.EmptyViewTemplate>
+                            <DataTemplate>
+                                <SP:NoData Icon="celebration" Description="You don't have any class" />
+                            </DataTemplate>
+                        </BindableLayout.EmptyViewTemplate>
+                        <BindableLayout.ItemTemplate>
+                            <DataTemplate>
+                                <StackLayout>
+                                    <Label Text="{Binding Title}" TextColor="{Binding TitleColor}" Style="{DynamicResource Subheader}"/>
+                                    <StackLayout BindableLayout.ItemsSource="{Binding .}" Margin="0,16">
+                                        <BindableLayout.ItemTemplate>
+                                            <DataTemplate>
+                                                <SP:CardTimeActive ID="{Binding ID}" Title="{Binding Name}" Description="{Binding LongSummary}" Day="{Binding Day}" 
+                                                                   StartTime="{Binding StartTime}" EndTime="{Binding EndTime}" Clicked="OnCardClicked" />
+                                            </DataTemplate>
+                                        </BindableLayout.ItemTemplate>
+                                    </StackLayout>
+                                </StackLayout>
+                            </DataTemplate>
+                        </BindableLayout.ItemTemplate>
+                    </StackLayout>
+
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </RefreshView>
+
+</ContentPage>

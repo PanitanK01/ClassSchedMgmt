@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:SP="clr-namespace:StudyPlanner.Controls"
+             x:Class="StudyPlanner.Views.PageTodo"
+             BackgroundColor="{DynamicResource BackgroundColor}">
+
+    <RefreshView x:Name="refresh" Refreshing="OnRefreshing" RefreshColor="{DynamicResource PrimaryColor}">
+        <StackLayout>
+            <ScrollView Padding="{DynamicResource PagePadding}" >
+                <StackLayout Spacing="{DynamicResource StackSpacing}">
+
+                    <SP:Header Text="Assignments" EnableClicked="True" Clicked="Header_Clicked"/>
+
+                    <!--SP:Input Type="Task" Placeholder="Add a task" Completed="OnTodoAdded" /-->
+
+                    <StackLayout x:Name="incompleteView">
+                        <BindableLayout.EmptyViewTemplate>
+                            <DataTemplate>
+                                <SP:NoData Icon="sentiment_very_satisfied" Description="You complete all tasks" />
+                            </DataTemplate>
+                        </BindableLayout.EmptyViewTemplate>
+                        <BindableLayout.ItemTemplate>
+                            <DataTemplate>
+                                <SP:CardTodo Task="{Binding .}" TodoChanged="OnTodoChanged" Deleted="OnTodoDeleted" EmptyTask="OnTodoForceDeleted" />
+                            </DataTemplate>
+                        </BindableLayout.ItemTemplate>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Complete" Style="{DynamicResource Subheader}" HorizontalOptions="FillAndExpand" VerticalOptions="Center"/>
+                        <SP:ToggleButton x:Name="completeViewCollapse" NormalIcon="expand_more" ToggledIcon="expand_less" Color="{DynamicResource TitleColor}" IsToggled="False" />
+                    </StackLayout>
+
+                    <StackLayout x:Name="completeView">
+                        <BindableLayout.ItemTemplate>
+                            <DataTemplate>
+                                <SP:CardTodo Task="{Binding .}" TodoChanged="OnTodoChanged" Deleted="OnTodoDeleted" EmptyTask="OnTodoForceDeleted"  
+                                             IsVisible="{Binding Source={Reference completeViewCollapse}, Path=IsToggled}" />
+                            </DataTemplate>
+                        </BindableLayout.ItemTemplate>
+                    </StackLayout>
+
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </RefreshView>
+    
+</ContentPage>

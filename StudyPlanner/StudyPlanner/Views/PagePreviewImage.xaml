@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:SP="clr-namespace:StudyPlanner.Controls"
+             xmlns:Convert="clr-namespace:StudyPlanner.Converters"
+             x:Class="StudyPlanner.Views.PagePreviewImage"
+             Style="{DynamicResource PageAE}">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Convert:ByteToImageSource x:Key="ByteToImageSource" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <StackLayout>
+        <Image Source="{Binding Image.Bytes, Converter={StaticResource ByteToImageSource}}" VerticalOptions="FillAndExpand" />
+    </StackLayout>
+    
+</ContentPage>

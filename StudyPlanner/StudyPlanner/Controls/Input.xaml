@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:Convert="clr-namespace:StudyPlanner.Converters"
+             x:Class="StudyPlanner.Controls.Input"
+             x:Name="input">
+
+    <ContentView.Resources>
+        <ResourceDictionary>
+            <Convert:ByteToImageSource x:Key="ByteToImageSource" />
+
+            <ControlTemplate x:Key="entry">
+                <Entry Text="{Binding Text, Source={Reference input}}" TextColor="{DynamicResource DescriptionColor}" FontSize="16" Placeholder="{Binding Placeholder, Source={Reference input}}" PlaceholderColor="{DynamicResource PlaceholderColor}" Keyboard="{Binding KeyboardType, Source={Reference input}}" ClearButtonVisibility="WhileEditing"/>
+            </ControlTemplate>
+            <ControlTemplate x:Key="picker">
+                <StackLayout Orientation="Horizontal">
+                    <Picker TextColor="{DynamicResource DescriptionColor}" Title="{Binding Placeholder, Source={Reference input}}" TitleColor="{DynamicResource PlaceholderColor}" FontSize="16" ItemsSource="{Binding ItemsSource, Source={Reference input}}" SelectedItem="{Binding SelectedItem, Source={Reference input}}" HorizontalOptions="FillAndExpand" />
+                    <Label Text="arrow_drop_down" FontFamily="Icons" FontSize="32" TextColor="{DynamicResource DescriptionColor}" VerticalOptions="Center"/>
+                </StackLayout>
+            </ControlTemplate>
+            <ControlTemplate x:Key="datePicker">
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="date_range" FontFamily="Icons" FontSize="24" Padding="4" TextColor="{DynamicResource DescriptionColor}" VerticalOptions="Center"/>
+                    <DatePicker TextColor="{DynamicResource DescriptionColor}" Format="D" FontSize="16" Date="{Binding Date, Source={Reference input}}" MinimumDate="{Binding MinimumDate, Source={Reference input}}" HorizontalOptions="FillAndExpand" DateSelected="OnDateSelected" />
+                </StackLayout>
+            </ControlTemplate>
+            <ControlTemplate x:Key="timePicker">
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="schedule" FontFamily="Icons" FontSize="24" Padding="4" TextColor="{DynamicResource DescriptionColor}" VerticalOptions="Center"/>
+                    <TimePicker Format="HH : mm"  TextColor="{DynamicResource DescriptionColor}" FontSize="16" Time="{Binding Time, Source={Reference input}}" HorizontalOptions="FillAndExpand" />
+                </StackLayout>
+            </ControlTemplate>
+            <ControlTemplate x:Key="editor">
+                <Editor AutoSize="TextChanges" Text="{Binding Text, Source={Reference input}}" TextColor="{DynamicResource DescriptionColor}" FontSize="16" Placeholder="{Binding Placeholder, Source={Reference input}}" PlaceholderColor="{DynamicResource PlaceholderColor}" />
+            </ControlTemplate>
+            <ControlTemplate x:Key="task">
+                <Grid ColumnDefinitions="auto, *">
+                    <Label Grid.Column="0" Text="add" FontFamily="Icons" FontSize="24" Padding="4" TextColor="{DynamicResource DescriptionColor}" VerticalOptions="Center"/>
+                    <Editor Grid.Column="1" AutoSize="TextChanges" TextColor="{DynamicResource DescriptionColor}" FontSize="16" Placeholder="{Binding Placeholder, Source={Reference input}}" PlaceholderColor="{DynamicResource PlaceholderColor}" Keyboard="{Binding KeyboardType, Source={Reference input}}" IsSpellCheckEnabled="False" TextChanged="OnEditorCompleted"/>
+                </Grid>
+            </ControlTemplate>
+            <ControlTemplate x:Key="search">
+                <Grid ColumnDefinitions="auto, *">
+                    <Label Grid.Column="0" Text="add" FontFamily="Icons" FontSize="24" Padding="4" TextColor="{DynamicResource DescriptionColor}" VerticalOptions="Center"/>
+                    <Editor Grid.Column="1" AutoSize="TextChanges" TextColor="{DynamicResource DescriptionColor}" FontSize="16" Placeholder="{Binding Placeholder, Source={Reference input}}" PlaceholderColor="{DynamicResource PlaceholderColor}" Keyboard="{Binding KeyboardType, Source={Reference input}}" IsSpellCheckEnabled="False" TextChanged="OnEditorCompleted"/>
+                </Grid>
+            </ControlTemplate>
+            <ControlTemplate x:Key="colorPicker">
+                <ScrollView Orientation="Horizontal">
+                    <StackLayout x:Name="self" Padding="8" Orientation="Horizontal" BindableLayout.ItemsSource="{Binding TagColor, Source={Reference input}}">
+                        <BindableLayout.ItemTemplate>
+                            <DataTemplate>
+                                <Frame BackgroundColor="{Binding .}" Padding="0" HasShadow="False" WidthRequest="30" HeightRequest="30" CornerRadius="4">
+                                    <Frame.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnColorClicked" />
+                                    </Frame.GestureRecognizers>
+                                </Frame>
+                            </DataTemplate>
+                        </BindableLayout.ItemTemplate>
+                    </StackLayout>
+                </ScrollView>
+            </ControlTemplate>
+            <ControlTemplate x:Key="imagePicker">
+                <StackLayout Spacing="0">
+                    <Grid ColumnDefinitions="*, *">
+                        <StackLayout Grid.Column="0" Orientation="Horizontal" HorizontalOptions="Center" Padding="8">
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnTakePhotoClicked" />
+                            </StackLayout.GestureRecognizers>
+                            <Label Text="photo_camera" FontFamily="Icons" FontSize="24" Padding="4" TextColor="{DynamicResource DescriptionColor}" VerticalOptions="Center"/>
+                            <Label Text="Take Photo" Padding="4" TextColor="{DynamicResource DescriptionColor}" VerticalOptions="Center"/>
+                        </StackLayout>
+                        <StackLayout Grid.Column="1" Orientation="Horizontal" HorizontalOptions="Center" Padding="8">
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnAddPhotoClicked" />
+                            </StackLayout.GestureRecognizers>
+                            <Label Text="insert_photo" FontFamily="Icons" FontSize="24" Padding="4" TextColor="{DynamicResource DescriptionColor}" VerticalOptions="Center"/>
+                            <Label Text="Add Image" Padding="4" TextColor="{DynamicResource DescriptionColor}" VerticalOptions="Center"/>
+                        </StackLayout>
+                    </Grid>
+
+                    <FlexLayout BindableLayout.ItemsSource="{Binding ItemsSource, Source={Reference input}}" Wrap="Wrap" JustifyContent="Center">
+                        <BindableLayout.ItemTemplate>
+                            <DataTemplate>
+                                <AbsoluteLayout Margin="1, 6">
+                                    <Frame Padding="0" CornerRadius="8" WidthRequest="85" HeightRequest="85" HasShadow="False">
+                                        <Image Source="{Binding Bytes, Converter={StaticResource ByteToImageSource}}" Aspect="AspectFill">
+                                            <Image.GestureRecognizers>
+                                                <TapGestureRecognizer Command="{Binding PreviewImageCommand, Source={Reference input}}" CommandParameter="{Binding .}" />
+                                            </Image.GestureRecognizers>
+                                        </Image>
+                                    </Frame>
+                                    <Frame Padding="1" HasShadow="False" BackgroundColor="{DynamicResource BackgroundCardColor}" AbsoluteLayout.LayoutBounds="70, -10" CornerRadius="20">
+                                        <Frame.GestureRecognizers>
+                                            <TapGestureRecognizer Command="{Binding DeleteCommand, Source={Reference input}}" CommandParameter="{Binding .}" />
+                                        </Frame.GestureRecognizers>
+                                        <Label Text="remove_circle" FontFamily="Icons" FontSize="24" TextColor="Red"  VerticalOptions="Center"/>
+                                    </Frame>
+                                </AbsoluteLayout>
+                            </DataTemplate>
+                        </BindableLayout.ItemTemplate>
+                    </FlexLayout>
+
+                </StackLayout>
+            </ControlTemplate>
+        </ResourceDictionary>
+    </ContentView.Resources>
+
+    <StackLayout Margin="2" Spacing="{DynamicResource StackSpacing}">
+        <Label x:Name="header" Text="{Binding Header, Source={Reference input}}" Style="{DynamicResource Subheader}" IsVisible="false" />
+
+        <Frame x:Name="inputFrame" Padding="16,8" CornerRadius="24" HasShadow="False" BackgroundColor="{DynamicResource BackgroundCardColor}">
+            <Frame.Triggers>
+                <DataTrigger TargetType="Frame" Binding="{Binding Type, Source={Reference input}}" Value="Search">
+                    <Setter Property="ControlTemplate" Value="{DynamicResource search}" />
+                </DataTrigger>
+                <DataTrigger TargetType="Frame" Binding="{Binding Type, Source={Reference input}}" Value="Entry">
+                    <Setter Property="ControlTemplate" Value="{DynamicResource entry}" />
+                </DataTrigger>
+                <DataTrigger TargetType="Frame" Binding="{Binding Type, Source={Reference input}}" Value="Picker">
+                    <Setter Property="ControlTemplate" Value="{DynamicResource picker}" />
+                </DataTrigger>
+                <DataTrigger TargetType="Frame" Binding="{Binding Type, Source={Reference input}}" Value="DatePicker">
+                    <Setter Property="ControlTemplate" Value="{DynamicResource datePicker}" />
+                </DataTrigger>
+                <DataTrigger TargetType="Frame" Binding="{Binding Type, Source={Reference input}}" Value="TimePicker">
+                    <Setter Property="ControlTemplate" Value="{DynamicResource timePicker}" />
+                </DataTrigger>
+                <DataTrigger TargetType="Frame" Binding="{Binding Type, Source={Reference input}}" Value="Editor">
+                    <Setter Property="ControlTemplate" Value="{DynamicResource editor}" />
+                </DataTrigger>
+                <DataTrigger TargetType="Frame" Binding="{Binding Type, Source={Reference input}}" Value="Task">
+                    <Setter Property="ControlTemplate" Value="{DynamicResource task}" />
+                </DataTrigger>
+                <DataTrigger TargetType="Frame" Binding="{Binding Type, Source={Reference input}}" Value="ColorPicker">
+                    <Setter Property="ControlTemplate" Value="{DynamicResource colorPicker}" />
+                </DataTrigger>
+                <DataTrigger TargetType="Frame" Binding="{Binding Type, Source={Reference input}}" Value="ImagePicker">
+                    <Setter Property="ControlTemplate" Value="{DynamicResource imagePicker}" />
+                </DataTrigger>
+            </Frame.Triggers>
+        </Frame>
+    </StackLayout>
+
+</ContentView>
