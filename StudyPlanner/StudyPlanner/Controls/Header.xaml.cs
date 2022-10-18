@@ -14,6 +14,9 @@ namespace StudyPlanner.Controls
     {
         public static BindableProperty TextProperty = BindableProperty.Create(nameof(Text), typeof(string), typeof(Header), string.Empty);
         public static BindableProperty EnableClickedProperty = BindableProperty.Create(nameof(EnableClicked), typeof(bool), typeof(Header), false);
+        public static BindableProperty EnableBackProperty = BindableProperty.Create(nameof(EnableBack), typeof(bool), typeof(Header), false);
+
+
 
         public event EventHandler Clicked;
 
@@ -27,6 +30,12 @@ namespace StudyPlanner.Controls
             get => (bool)GetValue(EnableClickedProperty);
             set => SetValue(EnableClickedProperty, value);
         }
+        public bool EnableBack
+        {
+            get => (bool)GetValue(EnableBackProperty);
+            set => SetValue(EnableBackProperty, value);
+        }
+
 
         public Header()
         {
@@ -36,6 +45,12 @@ namespace StudyPlanner.Controls
         private void OnAddClicked(object sender, EventArgs e)
         {
             Clicked?.Invoke(this, EventArgs.Empty);
+        }
+
+        private void ImageButton_Clicked(object sender, EventArgs e)
+        {
+            // Clicked?.Invoke(this, EventArgs.Empty);
+            Device.BeginInvokeOnMainThread(async () => await Navigation.PopAsync());
         }
     }
 }

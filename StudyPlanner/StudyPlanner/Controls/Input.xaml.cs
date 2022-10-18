@@ -25,6 +25,8 @@ namespace StudyPlanner.Controls
         public static BindableProperty KeyboardTypeProperty = BindableProperty.Create(nameof(KeyboardType), typeof(Keyboard), typeof(Input), Keyboard.Default);
 
         public static BindableProperty ItemsSourceProperty = BindableProperty.Create(nameof(ItemsSource), typeof(IList), typeof(Input), null, BindingMode.TwoWay);
+        //ต้องแก้ ItemsSource
+        // public static BindableProperty ItemDisplayBindingProperty = BindableProperty.Create(nameof(ItemDisplayBinding), typeof(BindingBase), typeof(Input));
         public static BindableProperty SelectedItemProperty = BindableProperty.Create(nameof(SelectedItem), typeof(object), typeof(Input), null, BindingMode.TwoWay);
 
         public static BindableProperty DateProperty = BindableProperty.Create(nameof(Date), typeof(DateTime), typeof(Input), DateTime.Now, BindingMode.TwoWay);
@@ -73,6 +75,7 @@ namespace StudyPlanner.Controls
             get => (IList)GetValue(ItemsSourceProperty);
             set => SetValue(ItemsSourceProperty, value);
         }
+       
         public object SelectedItem
         {
             get => GetValue(SelectedItemProperty);
@@ -121,7 +124,7 @@ namespace StudyPlanner.Controls
 
         public enum InputType
         {
-            Search,
+            
             Entry,
             Picker,
             DatePicker, 

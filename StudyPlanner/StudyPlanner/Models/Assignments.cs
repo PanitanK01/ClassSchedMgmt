@@ -12,6 +12,11 @@ namespace StudyPlanner.Models
         public bool IsComplete { get; set; }
         public string Task { get; set; }
         public bool IsImportant { get; set; }
+        public DateTime StartDate { get; set; } = DateTime.Now;
+        public DateTime EndDate { get; set; } = DateTime.Now;
+        public TimeSpan StartTime { get; set; }
+        public TimeSpan EndTime { get; set; } = new TimeSpan(23, 59, 59);
+
 
         public DateTime CreateDate { get; set; } = DateTime.Now;
     }

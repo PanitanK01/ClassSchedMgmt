@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StudyPlanner.Controls.Picker"
+             x:Name="picker">
+    
+    <StackLayout Margin="2" Spacing="{DynamicResource StackSpacing}">
+        <Label x:Name="header" Text="{Binding Header, Source={Reference picker}}" Style="{DynamicResource Subheader}" IsVisible="false" />
+
+        <Frame x:Name="inputFrame" Padding="16,8" CornerRadius="24" HasShadow="False" BackgroundColor="{DynamicResource BackgroundCardColor}">
+            <StackLayout Orientation="Horizontal">
+                <Picker x:Name="inputPicker" SelectedIndexChanged="inputPicker_SelectedIndexChanged" TextColor="{DynamicResource DescriptionColor}" TitleColor="{DynamicResource PlaceholderColor}" FontSize="16" HorizontalOptions="FillAndExpand" />
+                <Label Text="arrow_drop_down" FontFamily="Icons" FontSize="32" TextColor="{DynamicResource DescriptionColor}" VerticalOptions="Center"/>
+            </StackLayout>
+        </Frame>
+    </StackLayout>
+</ContentView>

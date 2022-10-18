@@ -13,12 +13,13 @@
             <Label HorizontalOptions="Center" Style="{DynamicResource TitleCardInactiveStyle}">
                 <Label.FormattedText>
                     <FormattedString>
-                        <Span Text="{Binding StartDate, Source={Reference cardEvent}, StringFormat='{0:dd}'}" FontSize="48" />
-                        <Span Text="{Binding StartDate, Source={Reference cardEvent}, StringFormat=' {0:MMMM yyyy}'}" FontSize="28"/>
+                        <Span Text="{Binding StartDate, Source={Reference cardEvent}, StringFormat='{0:dd}'}" FontSize="24" />
+                        <Span Text="{Binding StartDate, Source={Reference cardEvent}, StringFormat=' {0:MMMM yyyy}'}" FontSize="24"/>
                     </FormattedString>
                 </Label.FormattedText>
             </Label>
             <Label Text="{Binding Description, Source={Reference cardEvent}}" Style="{DynamicResource DescriptionInactiveStyle}"/>
+ 
         </StackLayout>
     </Frame>
 

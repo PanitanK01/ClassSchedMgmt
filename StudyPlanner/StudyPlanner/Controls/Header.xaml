@@ -9,7 +9,15 @@
             <TapGestureRecognizer Tapped="OnAddClicked" />
         </StackLayout.GestureRecognizers>
         <StackLayout Orientation="Horizontal" Spacing="{DynamicResource TextSpacing}">
+            
+            <ImageButton BackgroundColor="Transparent" IsVisible="{Binding EnableBack, Source={Reference header}}" Clicked="ImageButton_Clicked">
+                <ImageButton.Source>
+                    <FontImageSource FontFamily="Icons" Glyph="arrow_back" Size="32" Color="{DynamicResource TitleColor}"/>
+                </ImageButton.Source>
+            </ImageButton>
+            
             <Label Text="{Binding Text, Source={Reference header}}" Style="{DynamicResource Header}" HorizontalOptions="FillAndExpand" />
+           
             <ImageButton BackgroundColor="Transparent" IsVisible="{Binding EnableClicked, Source={Reference header}}" Clicked="OnAddClicked">
                 <ImageButton.Source>
                     <FontImageSource FontFamily="Icons" Glyph="add" Size="32" Color="{DynamicResource TitleColor}"/>

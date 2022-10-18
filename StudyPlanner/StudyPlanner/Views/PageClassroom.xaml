@@ -16,7 +16,8 @@
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
-                        <Button Grid.Column="1" Text="Courses" ImageSource="library_books.png"/>
+
+                        <Button Grid.Column="1" Text="Courses" ImageSource="library_books.png" Clicked="OnCourses_Clicked"/>
                     </Grid>
 
                     <StackLayout x:Name="dataView">

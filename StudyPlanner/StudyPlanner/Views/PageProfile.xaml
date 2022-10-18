@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:SP="clr-namespace:StudyPlanner.Controls"
+             x:Class="StudyPlanner.Views.PageProfile">
+    
+    <RefreshView x:Name="refresh" Refreshing="refresh_Refreshing" RefreshColor="{DynamicResource PrimaryColor}">
+        <StackLayout >
+
+            <ScrollView Padding="{DynamicResource PagePadding}" >
+                <StackLayout Spacing="{DynamicResource StackSpacing}" >
+
+                    <SP:Header EnableBack="True" Text="Profile" EnableClicked="True" Clicked="Header_Clicked" />
+
+                    <StackLayout x:Name="dataView">
+                        <ImageButton Source="account.png" VerticalOptions="Center"/>
+
+                        <BindableLayout.ItemTemplate>
+                            <DataTemplate>
+                                <SP:CradCourse ID="{Binding ID}"  Title="{Binding Name}" Description="{Binding LongSummary}"  />
+                            </DataTemplate>
+                        </BindableLayout.ItemTemplate>
+                    </StackLayout>
+
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </RefreshView>
+</ContentPage>

@@ -16,6 +16,8 @@ namespace StudyPlanner.Controls
         public static readonly BindableProperty IDProperty = BindableProperty.Create(nameof(ID), typeof(int), typeof(CardTimeActive), null);
         public static readonly BindableProperty TitleProperty = BindableProperty.Create(nameof(Title), typeof(string), typeof(CardEvent), string.Empty);
         public static readonly BindableProperty DescriptionProperty = BindableProperty.Create(nameof(Description), typeof(string), typeof(CardTimeActive), string.Empty);
+        public static readonly BindableProperty LocationProperty = BindableProperty.Create(nameof(Location), typeof(string), typeof(CardTimeActive), string.Empty);
+        public static readonly BindableProperty OrganizerProperty = BindableProperty.Create(nameof(Organizer), typeof(string), typeof(CardTimeActive), string.Empty);
         public static readonly BindableProperty StartDateProperty = BindableProperty.Create(nameof(StartDate), typeof(DateTime), typeof(CardTimeActive), null);
 
         public event EventHandler Clicked;
@@ -34,6 +36,16 @@ namespace StudyPlanner.Controls
         {
             get => (string)GetValue(DescriptionProperty);
             set => SetValue(DescriptionProperty, value);
+        }
+        public string Location
+        {
+            get => (string)GetValue(LocationProperty);
+            set => SetValue(LocationProperty, value);
+        }
+        public string Organizer
+        {
+            get => (string)GetValue(OrganizerProperty);
+            set => SetValue(OrganizerProperty, value);
         }
         public DateTime StartDate
         {

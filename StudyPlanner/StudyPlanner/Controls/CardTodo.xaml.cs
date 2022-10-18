@@ -11,7 +11,8 @@ namespace StudyPlanner.Controls
     {
         public static readonly BindableProperty TaskProperty = BindableProperty.Create(nameof(Task), typeof(Todo), typeof(CardTodo), null, BindingMode.TwoWay);
         public static BindableProperty PlaceholderProperty = BindableProperty.Create(nameof(Placeholder), typeof(string), typeof(Input), string.Empty);
-        
+        public static readonly BindableProperty StartDateProperty = BindableProperty.Create(nameof(StartDate), typeof(DateTime), typeof(CardTimeActive), null);
+
         public event EventHandler TodoChanged;
         public event EventHandler Deleted;
         public event EventHandler EmptyTask;
@@ -27,6 +28,11 @@ namespace StudyPlanner.Controls
         {
             get => (string)GetValue(PlaceholderProperty);
             set => SetValue(PlaceholderProperty, value);
+        }
+        public DateTime StartDate
+        {
+            get => (DateTime)GetValue(StartDateProperty);
+            set => SetValue(StartDateProperty, value);
         }
 
         public CardTodo()
