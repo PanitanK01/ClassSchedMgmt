@@ -10,9 +10,10 @@
             <ScrollView Padding="{DynamicResource PagePadding}" >
                 <StackLayout Spacing="{DynamicResource StackSpacing}">
 
-                    <SP:Header Text="Grade" />
+                <SP:Header Text="Grade" />
+                <SP:Input x:Name="ip_CGPAPicker" Type="Picker" Header="GPA / CGPA:" SelectedItem="{Binding Grade.CGPA}"/>
 
-                </StackLayout>
+            </StackLayout>
             </ScrollView>
         </StackLayout>
     

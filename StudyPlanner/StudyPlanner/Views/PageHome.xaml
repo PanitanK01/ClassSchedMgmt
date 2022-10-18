@@ -16,11 +16,12 @@
                         <Label Text="Home" Style="{DynamicResource Header}" HorizontalOptions="FillAndExpand" />
                                  <!--Todo เปลียนรูปคน รูปภาพ -->
                         <Label Text="NameProfile" FontSize="16" VerticalOptions="Center"/>
-                        <ImageButton Source="account.png"  />
+                        <ImageButton Source="account.png" Clicked="ProfileClicked"/>
                     </StackLayout>
-                    
-                    <SP:Input Type="Entry" Placeholder="Search" Completed="Input_Completed" />
-                    
+
+                    <!--SP:Input Type="Entry" Placeholder="Search" Completed="Input_Completed" /-->
+                    <SearchBar x:Name="searchBar"  Placeholder="Search" SearchCommand="{Binding SearchButtonPressed}"  TextColor="{DynamicResource TitleCardColor}" SearchCommandParameter="{Binding Source={x:Reference searchBar}, Path=Text}"/>
+
                     <Label Text="Date:" Style="{DynamicResource Subheader}" HorizontalOptions="FillAndExpand" VerticalOptions="Center"/>
 
                     

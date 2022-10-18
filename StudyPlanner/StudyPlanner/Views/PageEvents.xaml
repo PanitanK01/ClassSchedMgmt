@@ -20,7 +20,7 @@
                         </BindableLayout.EmptyViewTemplate>
                         <BindableLayout.ItemTemplate>
                             <DataTemplate>
-                                <SP:CardEvent ID="{Binding ID}" Title="{Binding Name}" StartDate="{Binding StartDate}" Description="{Binding LongSummary}" Clicked="OnCardClicked" />
+                                <SP:CardEvent ID="{Binding ID}" Title="{Binding Name}" Description="{Binding LongSummary}" StartDate="{Binding StartDate}" Clicked="OnCardClicked" />
                             </DataTemplate>
                         </BindableLayout.ItemTemplate>
                     </StackLayout>

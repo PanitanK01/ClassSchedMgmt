@@ -30,6 +30,10 @@ namespace StudyPlanner
             Routing.RegisterRoute("NotesAE", typeof(PageNotesAE));
             Routing.RegisterRoute("PreviewImage", typeof(PagePreviewImage));
             Routing.RegisterRoute("AssignmentsAE", typeof(PageAssignmentsAE));
+            Routing.RegisterRoute("Courses", typeof(PageCourses));
+            Routing.RegisterRoute("CoursesAE", typeof(PageCoursesAE));
+            Routing.RegisterRoute("Profile", typeof(PageProfile));
+            Routing.RegisterRoute("ProfileE", typeof(PageProfileE));
 
             MainPage = new MainPage();
         }

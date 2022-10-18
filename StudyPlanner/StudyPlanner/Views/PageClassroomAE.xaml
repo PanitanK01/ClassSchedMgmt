@@ -9,17 +9,21 @@
     <ScrollView Padding="{DynamicResource PagePadding}">
         <StackLayout Spacing="{DynamicResource StackSpacing}">
 
-            <SP:Input x:Name="ip_semesterPicker" Type="Picker" Header="Semester" SelectedItem="{Binding Class.Semester}"/>
-            <SP:Input x:Name="ip_yearPicker" Type="Picker" Header="Academic Year" SelectedItem="{Binding Class.Year}"/>
-            <SP:Input x:Name="ip_dayPicker" Type="Picker" Header="Day" SelectedItem="{Binding Class.Day}" Placeholder="Class day" />
-            <SP:Input x:Name="ip_codePicker" Type="Picker" Header="Course Code" SelectedItem="{Binding Class.Code}"/>
+            
+            <SP:Picker x:Name="ip_semesterPicker" Header="Semester" SelectedItem="{Binding Class.Semester}"/>
+            <SP:Picker x:Name="ip_yearPicker" Header="Academic Year" SelectedItem="{Binding Class.Year}"/>
+            <SP:Picker x:Name="ip_dayPicker" Header="Day" SelectedItem="{Binding Class.Day}" Placeholder="Class day" />
+            <SP:Picker x:Name="ip_codePicker" Header="Course Code" SelectedItem="{Binding selectedCourse}" ItemDisplayBinding="{Binding Code}}" SelectedIndexChanged="ip_codePicker_SelectedIndexChanged"/>
+            
+            
             <SP:Input Type="Entry" Header="Course Name" Text="{Binding Class.Name}" Placeholder="Class name" />
             <SP:Input Type="TimePicker" Header="Start Time" Time="{Binding Class.StartTime}" />
             <SP:Input Type="TimePicker" Header="End Time" Time="{Binding Class.EndTime}" />
             <SP:Input Type="Entry" Header="Room" Text="{Binding Class.Room}" Placeholder="Room number" />
-            <SP:Input Type="Entry" Header="Section" Text="{Binding Class.Section}" Placeholder="Section number" />
+            <SP:Input Type="Entry" Header="Section Number" Text="{Binding Class.Section}" Placeholder="Section number" />
             <SP:Input Type="Entry" KeyboardType="Numeric" Header="Seat Number" Text="{Binding Class.Number}" Placeholder="Student number" />
-            <SP:Input Type="Editor" Header="Grade" Text="{Binding Class.Grade}" Placeholder="Grade" />
+            <SP:Input Type="Entry" KeyboardType="Numeric" Header="Grade" Text="{Binding Class.Grade}" Placeholder="Grade" />
+            <SP:Input Type="DatePicker" Header="Class Cancellation" Text="{Binding Class.Cancellation}" DateSelected="Input_DateSelected" />
 
         </StackLayout>
     </ScrollView>

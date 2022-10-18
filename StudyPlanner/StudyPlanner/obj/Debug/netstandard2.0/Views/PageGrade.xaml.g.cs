@@ -17,8 +17,12 @@ namespace StudyPlanner.Views {
     public partial class PageGrade : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::StudyPlanner.Controls.Input ip_CGPAPicker;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
             global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(PageGrade));
+            ip_CGPAPicker = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::StudyPlanner.Controls.Input>(this, "ip_CGPAPicker");
         }
     }
 }

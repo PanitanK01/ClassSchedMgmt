@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StudyPlanner.Views.PageCoursesAE"
+             xmlns:SP="clr-namespace:StudyPlanner.Controls"
+             Title="{Binding Title}"
+             Style="{DynamicResource PageAE}">
+    
+    
+    <ScrollView Padding="{DynamicResource PagePadding}">
+        <StackLayout Spacing="{DynamicResource StackSpacing}">
+
+            <SP:Input Type="Entry" Header="Course Code" Text="{Binding Course.Code}" Placeholder="Course code" />
+            <SP:Input Type="Entry" Header="Course Name" Text="{Binding Course.Name}" Placeholder="Course name" />
+            <SP:Input Type="Entry" KeyboardType="Numeric" Header="Credit" Text="{Binding Course.Credit}" Placeholder="Credit" />
+            <SP:Input Type="Entry" Header="Prerequisite Course Code" Text="{Binding Course.PreCode}" Placeholder="Prerequisite course code" />
+            <SP:Input Type="Entry" Header="Prerequisite Course Name" Text="{Binding Course.PreName}" Placeholder="Prerequisite course name" />
+           
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

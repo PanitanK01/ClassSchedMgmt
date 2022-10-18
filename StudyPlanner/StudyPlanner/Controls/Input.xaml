@@ -14,7 +14,7 @@
             </ControlTemplate>
             <ControlTemplate x:Key="picker">
                 <StackLayout Orientation="Horizontal">
-                    <Picker TextColor="{DynamicResource DescriptionColor}" Title="{Binding Placeholder, Source={Reference input}}" TitleColor="{DynamicResource PlaceholderColor}" FontSize="16" ItemsSource="{Binding ItemsSource, Source={Reference input}}" SelectedItem="{Binding SelectedItem, Source={Reference input}}" HorizontalOptions="FillAndExpand" />
+                    <Picker x:Name="inputPicker" TextColor="{DynamicResource DescriptionColor}" Title="{Binding Placeholder, Source={Reference input}}" TitleColor="{DynamicResource PlaceholderColor}" FontSize="16" ItemsSource="{Binding ItemsSource, Source={Reference input}}" SelectedItem="{Binding SelectedItem, Source={Reference input}}" HorizontalOptions="FillAndExpand" />
                     <Label Text="arrow_drop_down" FontFamily="Icons" FontSize="32" TextColor="{DynamicResource DescriptionColor}" VerticalOptions="Center"/>
                 </StackLayout>
             </ControlTemplate>
@@ -39,12 +39,15 @@
                     <Editor Grid.Column="1" AutoSize="TextChanges" TextColor="{DynamicResource DescriptionColor}" FontSize="16" Placeholder="{Binding Placeholder, Source={Reference input}}" PlaceholderColor="{DynamicResource PlaceholderColor}" Keyboard="{Binding KeyboardType, Source={Reference input}}" IsSpellCheckEnabled="False" TextChanged="OnEditorCompleted"/>
                 </Grid>
             </ControlTemplate>
-            <ControlTemplate x:Key="search">
+            
+            <!--ControlTemplate x:Key="search">
                 <Grid ColumnDefinitions="auto, *">
                     <Label Grid.Column="0" Text="add" FontFamily="Icons" FontSize="24" Padding="4" TextColor="{DynamicResource DescriptionColor}" VerticalOptions="Center"/>
-                    <Editor Grid.Column="1" AutoSize="TextChanges" TextColor="{DynamicResource DescriptionColor}" FontSize="16" Placeholder="{Binding Placeholder, Source={Reference input}}" PlaceholderColor="{DynamicResource PlaceholderColor}" Keyboard="{Binding KeyboardType, Source={Reference input}}" IsSpellCheckEnabled="False" TextChanged="OnEditorCompleted"/>
+                    <Editor Grid.Column="1" AutoSize="TextChanges" TextColor="{DynamicResource DescriptionColor}" FontSize="16" Placeholder="{Binding Placeholder, Source={Reference input}}" 
+                            PlaceholderColor="{DynamicResource PlaceholderColor}" Keyboard="{Binding KeyboardType, Source={Reference input}}" IsSpellCheckEnabled="False" TextChanged="OnEditorCompleted"/>
                 </Grid>
-            </ControlTemplate>
+            </ControlTemplate/-->
+            
             <ControlTemplate x:Key="colorPicker">
                 <ScrollView Orientation="Horizontal">
                     <StackLayout x:Name="self" Padding="8" Orientation="Horizontal" BindableLayout.ItemsSource="{Binding TagColor, Source={Reference input}}">
@@ -111,9 +114,9 @@
 
         <Frame x:Name="inputFrame" Padding="16,8" CornerRadius="24" HasShadow="False" BackgroundColor="{DynamicResource BackgroundCardColor}">
             <Frame.Triggers>
-                <DataTrigger TargetType="Frame" Binding="{Binding Type, Source={Reference input}}" Value="Search">
+                <!--DataTrigger TargetType="Frame" Binding="{Binding Type, Source={Reference input}}" Value="Search">
                     <Setter Property="ControlTemplate" Value="{DynamicResource search}" />
-                </DataTrigger>
+                </DataTrigger/-->
                 <DataTrigger TargetType="Frame" Binding="{Binding Type, Source={Reference input}}" Value="Entry">
                     <Setter Property="ControlTemplate" Value="{DynamicResource entry}" />
                 </DataTrigger>

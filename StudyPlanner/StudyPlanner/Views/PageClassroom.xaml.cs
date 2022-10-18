@@ -14,7 +14,7 @@ namespace StudyPlanner.Views
     public partial class PageClassroom : ContentPage
     {
         List<DayOfWeek> dayOfWeeks = new List<DayOfWeek> { DayOfWeek.Sunday, DayOfWeek.Monday, DayOfWeek.Tuesday, DayOfWeek.Wednesday, DayOfWeek.Thursday, DayOfWeek.Friday, DayOfWeek.Saturday };
-
+        List<int> Semester = new List<int> { 1, 2, 3 };
         public PageClassroom()
         {
             InitializeComponent();
@@ -52,6 +52,11 @@ namespace StudyPlanner.Views
         {
             RefreshData();
             refresh.IsRefreshing = false;
+        }
+
+        private async void OnCourses_Clicked(object sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync($"Courses");
         }
     }
 }

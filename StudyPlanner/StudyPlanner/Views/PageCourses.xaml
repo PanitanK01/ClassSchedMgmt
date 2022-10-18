@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:SP="clr-namespace:StudyPlanner.Controls"
+             x:Class="StudyPlanner.Views.PageCourses"
+             BackgroundColor="{DynamicResource BackgroundColor}">
+
+
+    <RefreshView x:Name="refresh" Refreshing="refresh_Refreshing" RefreshColor="{DynamicResource PrimaryColor}">
+        <StackLayout >
+
+            <ScrollView Padding="{DynamicResource PagePadding}" >
+                <StackLayout Spacing="{DynamicResource StackSpacing}" >
+
+                    <SP:Header EnableBack="True" Text="Courses" EnableClicked="True" Clicked="OnAddClicked" />
+
+                    <StackLayout x:Name="dataView">
+                        <BindableLayout.EmptyViewTemplate>
+                            <DataTemplate>
+                                <SP:NoData Icon="celebration" Description="You don't have any class" />
+                            </DataTemplate>
+                        </BindableLayout.EmptyViewTemplate>
+                        
+                        <BindableLayout.ItemTemplate>
+                            <DataTemplate>
+                                <SP:CradCourse ID="{Binding ID}"  Title="{Binding Name}" Description="{Binding LongSummary}" Clicked="CardCourse_Clicked"  />
+                            </DataTemplate>
+                        </BindableLayout.ItemTemplate>
+                    </StackLayout>
+
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </RefreshView>
+</ContentPage>

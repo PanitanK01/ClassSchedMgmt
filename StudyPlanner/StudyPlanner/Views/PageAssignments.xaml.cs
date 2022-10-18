@@ -65,9 +65,9 @@ namespace StudyPlanner.Views
             RefreshData();
         }
 
-        private async void Header_Clicked(object sender, EventArgs e)
+        private async void OnAddClicked(object sender, EventArgs e)
         {
-            await Shell.Current.GoToAsync($"AssignmentsAE");
+            await Shell.Current.GoToAsync($"AssignmentsAE?Title=Add Assignments&Type={PageType.Add}");
         }
     }
 }

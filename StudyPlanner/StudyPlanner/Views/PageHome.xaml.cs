@@ -35,9 +35,11 @@ namespace StudyPlanner.Views
             refresh.IsRefreshing = false;
         }
 
-        private void Input_Completed(object sender, EventArgs e)
-        {
+      
 
+        private async void ProfileClicked (object sender, EventArgs e) 
+        {
+            await Shell.Current.GoToAsync($"Profile");
         }
     }
 }

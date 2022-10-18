@@ -22,18 +22,42 @@ namespace StudyPlanner.Views
         public string Type { get; set; }
         public Classroom Class { get; set; }
 
+        public Course selectedCode { get; set; }
+
         private bool QueryPropertyComplete = false;
 
         List<DayOfWeek> dayOfWeeks = new List<DayOfWeek> { DayOfWeek.Sunday, DayOfWeek.Monday, DayOfWeek.Tuesday, DayOfWeek.Wednesday, DayOfWeek.Thursday, DayOfWeek.Friday, DayOfWeek.Saturday };
-        // List<NumSemester> semester = new List<Semester> { Semester.1, Semester.2, Semester.3, }; //
-        // List<year> semester = new List<Semester> { Semester.1, Semester.2, Semester.3, }; //
-        // List<code> semester = new List<Semester> { Semester.1, Semester.2, Semester.3, }; //
+        
+        List<int> semester = new List<int> { 1, 2, 3 };
+        
+        List<int> years = new List<int> { };
+        
         public PageClassroomAE()
         {
             InitializeComponent();
             ip_dayPicker.ItemsSource = dayOfWeeks;
 
+            ip_semesterPicker.ItemsSource = semester;
+
+            int currentYear = DateTime.Now.Year;
+            for (int i = 1; i <= 10; i++)
+            {
+                years.Add(currentYear - i);
+            }
+            years.Add(currentYear);
+            years.Add(currentYear + 1);
+            years.Sort();
+               
+            ip_yearPicker.ItemsSource = years;
+            LoadCourses();
+
             BindingContext = this;
+        }
+
+        private async void LoadCourses()
+        {
+            List<Course> courses = await App.Database.GetCourses();
+            ip_codePicker.ItemsSource = courses;
         }
 
         private async void OnSaveClicked(object sender, EventArgs e)
@@ -93,6 +117,22 @@ namespace StudyPlanner.Views
                 QueryPropertyComplete = true;
                 ToolbarItems.Clear();
             }
+
+           
+        }
+
+        private void Input_DateSelected(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ip_codePicker_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var picker = (Picker)sender;
+
+            Course course = (Course)picker.SelectedItem;
+
+            Class.CourseId = course.ID;
         }
     }
 }

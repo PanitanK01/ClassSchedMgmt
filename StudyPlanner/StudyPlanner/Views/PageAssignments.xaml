@@ -10,7 +10,7 @@
             <ScrollView Padding="{DynamicResource PagePadding}" >
                 <StackLayout Spacing="{DynamicResource StackSpacing}">
 
-                    <SP:Header Text="Assignments" EnableClicked="True" Clicked="Header_Clicked"/>
+                    <SP:Header Text="Assignments" EnableClicked="True" Clicked="OnAddClicked"/>
 
                     <!--SP:Input Type="Task" Placeholder="Add a task" Completed="OnTodoAdded" /-->
 
